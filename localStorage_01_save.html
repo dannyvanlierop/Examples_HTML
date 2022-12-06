@@ -1,0 +1,10 @@
+<input class="js-name">
+<button onclick="save()">Save</button>
+
+<script>
+  function save() {
+    // Get the value from js-name box
+    var username = document.getElementsByClassName('js-name')[0].value;
+    localStorage.setItem('username', username);
+  }
+</script>
