@@ -1,0 +1,26 @@
+<input class="js-name">
+<button onclick="save()">Save</button>
+
+<script>
+  function save() {
+    // Get the value from js-name box
+    var username = document.getElementsByClassName('js-name')[0].value;
+    localStorage.setItem('username', username);
+  }
+</script>
+
+
+
+<body onload="load()">
+    <h1 class="js-welcome"></h1>
+    <! -- All the rest of your body code, etc. -- >
+  
+    <script>
+      function load() {
+        // Called on page load. Get the localStorage stuff:
+        const username = localStorage.getItem('username');
+        const welcomeElement = document.getElementsByClassName('js-welcome')[0];
+        welcomeElement.innerText = "Welcome, " + username;
+      }
+    </script>
+</body>
